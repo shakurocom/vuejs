@@ -7,19 +7,16 @@
 </template>
 
 <script>
-import moment from 'moment'
 import VuePikaday from './vue-pikaday'
 
 export default {
   name: 'hello',
 
   data () {
-    const dateFormat = 'YYYY MM DD dddd'
-
     return {
-      date: moment().format(dateFormat),
+      date: new Date(),
       dateOptions: {
-        format: dateFormat
+        format: 'YYYY MM DD dddd'
       }
     }
   },
